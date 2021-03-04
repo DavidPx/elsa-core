@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 using System.Dynamic;
 using System.Linq;
 using System.Threading;
@@ -93,7 +94,7 @@ namespace Elsa.Scripting.JavaScript.Services
                 return targetType != null
                     ? targetType == typeof(Uri)
                         ? new Uri(stringValue, UriKind.RelativeOrAbsolute)
-                        : Convert.ChangeType(stringValue, targetType)
+                        : TypeDescriptor.GetConverter(targetType).ConvertFrom(stringValue)
                     : value.AsString();
             }
 
