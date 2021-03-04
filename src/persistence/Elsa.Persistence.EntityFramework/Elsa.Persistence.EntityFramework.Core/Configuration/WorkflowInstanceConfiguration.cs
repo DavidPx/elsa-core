@@ -1,4 +1,5 @@
-﻿using Elsa.Models;
+using System.Security.Cryptography.X509Certificates;
+using Elsa.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -23,6 +24,7 @@ namespace Elsa.Persistence.EntityFramework.Core.Configuration
             builder.Ignore(x => x.Variables);
             builder.Ignore(x => x.CurrentActivity);
             builder.Property<string>("Data");
+            builder.HasIndex(x => new { x.WorkflowStatus, x.DefinitionId, x.Version }).HasDatabaseName("IX_WorkflowInstance_Status_DefinitionId_Version");
         }
     }
 }
