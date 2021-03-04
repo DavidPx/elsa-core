@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Threading.Tasks;
 using Elsa.Persistence;
 using Elsa.Persistence.EntityFramework.Core.Extensions;
-using Elsa.Persistence.EntityFramework.Sqlite;
+using Elsa.Persistence.EntityFramework.PostgreSql;
 using Elsa.Persistence.Specifications.WorkflowInstances;
 using Elsa.Services;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,7 +17,7 @@ namespace Elsa.Samples.Persistence.EntityFramework
             var services = new ServiceCollection()
                 .AddElsa(options => options
                     // Configure Elsa to use the Entity Framework Core persistence provider using Sqlite.
-                    .UseEntityFrameworkPersistence(ef => ef.UseSqlite())
+                    .UseEntityFrameworkPersistence(ef => ef.UsePostgreSql("Server=127.0.0.1;Port=5432;Database=elsa;User Id=postgres;Password=foobar;"))
                     .AddConsoleActivities()
                     .AddWorkflow<HelloWorld>())
                 .AddAutoMapperProfiles<Program>()

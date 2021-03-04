@@ -1,5 +1,6 @@
-﻿using Elsa.Activities.Console;
+using Elsa.Activities.Console;
 using Elsa.Builders;
+using Elsa.Models;
 
 namespace Elsa.Samples.Persistence.EntityFramework
 {
@@ -7,7 +8,9 @@ namespace Elsa.Samples.Persistence.EntityFramework
     {
         public void Build(IWorkflowBuilder builder)
         {
-            builder.WriteLine("Hello World!");
+            builder
+                .WithPersistenceBehavior(WorkflowPersistenceBehavior.WorkflowBurst)
+                .WriteLine("Hello World!");
         }
     }
 }
