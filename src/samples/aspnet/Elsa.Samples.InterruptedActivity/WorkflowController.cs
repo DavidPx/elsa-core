@@ -29,5 +29,12 @@ namespace Elsa.Samples.InterruptedActivity
 
             return Ok();
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Poke()
+        {
+
+            return Ok("ouch");
+        }
     }
 }

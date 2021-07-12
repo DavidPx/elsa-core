@@ -12,7 +12,7 @@ namespace Elsa.Samples.InterruptedActivity
         protected override async ValueTask<IActivityExecutionResult> OnExecuteAsync(ActivityExecutionContext context)
         {
             Trace.WriteLine($"Starting my slow task.. {context.WorkflowInstance.Id}.{context.ActivityId}.  {DateTime.Now.TimeOfDay}");
-            //Trace.WriteLine("fioo");
+            
             await Task.Delay(10000);
 
             Trace.WriteLine($"Phew, I finished!  {context.WorkflowInstance.Id}. {context.ActivityId}.  {DateTime.Now.TimeOfDay}");
