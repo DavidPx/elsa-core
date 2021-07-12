@@ -267,8 +267,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "github", "github", "{3BF2C5
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\publish-latest-dashboard-and-server-docker.yml = .github\workflows\publish-latest-dashboard-and-server-docker.yml
 		.github\workflows\publish-latest-dashboard-docker.yml = .github\workflows\publish-latest-dashboard-docker.yml
-		.github\workflows\publish-latest-server-docker.yml = .github\workflows\publish-latest-server-docker.yml
 		.github\workflows\publish-latest-designer-npm.yml = .github\workflows\publish-latest-designer-npm.yml
+		.github\workflows\publish-latest-server-docker.yml = .github\workflows\publish-latest-server-docker.yml
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Elsa.Samples.SignalApi", "src\samples\aspnet\Elsa.Samples.SignalApi\Elsa.Samples.SignalApi.csproj", "{3E2423CF-50E6-4D2B-8749-17B1EF540FE4}"
@@ -328,6 +328,7 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Samples.InterruptedActivity", "src\samples\console\Elsa.Samples.InterruptedActivity\Elsa.Samples.InterruptedActivity.csproj", "{FD2B1562-C0EF-4458-898E-A8051D069634}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Samples.InterruptedActivity", "src\samples\aspnet\Elsa.Samples.InterruptedActivity\Elsa.Samples.InterruptedActivity.csproj", "{46C10034-4DF9-496D-9FDB-32346FC4E538}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Samples.CustomTenantIdSource", "src\samples\aspnet\Elsa.Samples.CustomTenantIdSource\Elsa.Samples.CustomTenantIdSource.csproj", "{6E191628-927B-42FB-8805-D2977D8FC4E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -763,6 +764,10 @@ Global
 		{46C10034-4DF9-496D-9FDB-32346FC4E538}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46C10034-4DF9-496D-9FDB-32346FC4E538}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46C10034-4DF9-496D-9FDB-32346FC4E538}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E191628-927B-42FB-8805-D2977D8FC4E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E191628-927B-42FB-8805-D2977D8FC4E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E191628-927B-42FB-8805-D2977D8FC4E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E191628-927B-42FB-8805-D2977D8FC4E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -907,6 +912,7 @@ Global
 		{39DE1EE2-DF4F-44EB-9F5A-551BEADD6673} = {4673732F-2853-47BD-91B8-C95C229D2C89}
 		{FD2B1562-C0EF-4458-898E-A8051D069634} = {FC9F520F-BA51-4AD2-BFEE-EF787798E734}
 		{46C10034-4DF9-496D-9FDB-32346FC4E538} = {22E75696-6FE9-436A-9097-EE21C603F818}
+		{6E191628-927B-42FB-8805-D2977D8FC4E3} = {22E75696-6FE9-436A-9097-EE21C603F818}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8B0975FD-7050-48B0-88C5-48C33378E158}

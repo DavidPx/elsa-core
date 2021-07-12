@@ -4,10 +4,12 @@ using System.Linq;
 using System.Reflection;
 using Elsa.Builders;
 using Elsa.Caching;
+using Elsa.Models;
 using Elsa.Persistence;
 using Elsa.Providers.WorkflowStorage;
 using Elsa.Services;
 using Elsa.Services.Messaging;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using Rebus.DataBus.InMem;
@@ -231,6 +233,12 @@ namespace Elsa
         public ElsaOptionsBuilder UseServiceBus(Action<ServiceBusEndpointConfigurationContext> setup)
         {
             ElsaOptions.ConfigureServiceBusEndpoint = setup;
+            return this;
+        }
+
+        public ElsaOptionsBuilder AddCustomTenantAccessor<T>() where T : class, ITenantAccessor
+        {
+            Services.AddScoped<ITenantAccessor, T>();
             return this;
         }
     }
